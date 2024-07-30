@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
 
+import ButtonBar from "@/components/ButtonBar.vue";
 import DetailPane from "@/components/DetailPane.vue";
 import DynamicTable from "@/components/DynamicTable.vue";
 import FilterTextInput from "@/components/FilterTextInput.vue";
 import NoResults from "@/components/NoResults.vue";
-import SimpleButton from "@/components/SimpleButton.vue";
 import ToggleColumns from "@/components/ToggleColumns.vue";
 
 import type { TableModel } from "@/types";
@@ -165,54 +165,20 @@ watch(filterText, (newValue) => {
   <main class="main">
     <div class="headline">Deals!</div>
     <FilterTextInput v-model="filterText" />
-    <div class="buttons">
-      <SimpleButton
-        :disabled="filterText.length <= 0"
-        data-testid="clear-filter-button"
-        @simpleButtonClick="clearFilter"
-      >
-        Clear filter
-      </SimpleButton>
-
-      <SimpleButton
-        :disabled="sortColumn === ''"
-        @simpleButtonClick="resetSort"
-        data-testid="clear-sort-button"
-      >
-        Clear sort
-      </SimpleButton>
-
-      <SimpleButton
-        @simpleButtonClick="clearSelectedRows"
-        data-testid="clear-selection-button"
-        :disabled="selectedRows.length === 0"
-      >
-        Clear selected rows
-      </SimpleButton>
-
-      <SimpleButton
-        @simpleButtonClick="reset"
-        data-testid="reset-button"
-        :disabled="selectedRows.length <= 0 && filterText === '' && sortColumn === ''"
-      >
-        Reset
-      </SimpleButton>
-
-      <SimpleButton
-        data-testid="column-list-toggle-button"
-        @simpleButtonClick="columnTogglesVisible = !columnTogglesVisible"
-      >
-        {{ columnTogglesVisible ? "Close column selector" : "Show/hide columns" }}
-      </SimpleButton>
-
-      <SimpleButton
-        @simpleButtonClick="exportToCSV(filteredTableData)"
-        data-testid="export-to-csv-button"
-        :disabled="filteredTableData.length <= 0"
-      >
-        Export to CSV
-      </SimpleButton>
-    </div>
+    <ButtonBar
+      :clearFilterDisabled="filterText.length <= 0"
+      :clearSortDisabled="sortColumn === ''"
+      :clearSelectedRowsDisabled="selectedRows.length <= 0"
+      :columnSelectorVisible="columnTogglesVisible"
+      :resetDisabled="selectedRows.length <= 0 && filterText === '' && sortColumn === ''"
+      :exportCSVDisabled="filteredTableData?.length <= 0"
+      @clickClearSelectedRows="clearSelectedRows"
+      @clickClearFilter="clearFilter"
+      @clickClearSort="resetSort"
+      @clickReset="reset"
+      @clickExportToCSV="exportToCSV(filteredTableData)"
+      @toggleColumnEditVisibility="columnTogglesVisible = !columnTogglesVisible"
+    />
     <ToggleColumns
       v-if="columnTogglesVisible"
       @toggleColumnVisibility="columnTogglesVisible = !columnTogglesVisible"
@@ -227,7 +193,7 @@ watch(filterText, (newValue) => {
     />
     <div class="grid-container">
       <DynamicTable
-        v-if="filteredTableData.length > 0"
+        v-if="filteredTableData?.length > 0"
         @handleColumnHeaderClick="handleColumnHeaderClick"
         @handleRowClick="handleRowClick"
         :columns="tableModel.columns"
@@ -263,18 +229,6 @@ watch(filterText, (newValue) => {
     font-size: 30pt;
     text-align: center;
     margin-bottom: 10px;
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-    button:not(:last-child) {
-      margin-right: 10px;
-    }
   }
 
   .grid-container {
