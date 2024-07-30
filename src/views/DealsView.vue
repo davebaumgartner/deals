@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import DetailPane from "@/components/DetailPane.vue";
 import DynamicTable from "@/components/DynamicTable.vue";
+import FilterTextInput from "@/components/FilterTextInput.vue";
 import type { TableModel } from "@/types";
 import { computed, ref } from "vue";
 
@@ -11,6 +12,7 @@ interface Props<T> {
 const props = defineProps<Props<any>>();
 
 const selectedRows = ref<number[]>([]);
+const filterText = ref<string>("");
 
 // handles selection and deselection of rows
 const handleRowClick = (id: number) => {
@@ -32,6 +34,7 @@ const columnKeysAndLabels = computed(() =>
 <template>
   <main class="main">
     <div class="headline">Deals!</div>
+    <FilterTextInput v-model="filterText" />
     <div class="grid-container">
       <DynamicTable
         @handleRowClick="handleRowClick"
