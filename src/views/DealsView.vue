@@ -1,13 +1,14 @@
 <script setup lang="ts">
+import DetailPane from "@/components/DetailPane.vue";
 import DynamicTable from "@/components/DynamicTable.vue";
 import type { TableModel } from "@/types";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 interface Props<T> {
   tableData: T[];
   tableModel: TableModel<T>;
 }
-defineProps<Props<any>>();
+const props = defineProps<Props<any>>();
 
 const selectedRows = ref<number[]>([]);
 
@@ -19,17 +20,31 @@ const handleRowClick = (id: number) => {
     selectedRows.value.push(id);
   }
 };
+
+// get all column keys and labels:
+const columnKeysAndLabels = computed(() =>
+  props.tableModel?.columns.map((column) => {
+    return { key: column.key, label: column.label };
+  })
+);
 </script>
 
 <template>
   <main class="main">
     <div class="headline">Deals!</div>
-    <DynamicTable
-      @handleRowClick="handleRowClick"
-      :tableData="tableData"
-      :columns="tableModel.columns"
-      :selectedRows="selectedRows"
-    />
+    <div class="grid-container">
+      <DynamicTable
+        @handleRowClick="handleRowClick"
+        :tableData="tableData"
+        :columns="tableModel.columns"
+        :selectedRows="selectedRows"
+      />
+      <DetailPane
+        v-if="selectedRows.length === 1 && tableData.find((row) => row.id === selectedRows[0])"
+        :headers="columnKeysAndLabels"
+        :row="tableData.filter((row) => row.id === selectedRows[0])[0]"
+      />
+    </div>
   </main>
 </template>
 
@@ -44,6 +59,11 @@ const handleRowClick = (id: number) => {
     font-size: 30pt;
     text-align: center;
     margin-bottom: 10px;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: row;
   }
 }
 </style>
