@@ -9,17 +9,17 @@ export default defineConfig({
   build: {
     minify: true
   },
+  plugins: [vue(), vueDevTools()],
+  resolve: {
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url))
+    }
+  },
   css: {
     preprocessorOptions: {
       scss: {
         additionalData: `@import "@/assets/scss/global.scss";`,
       },
     },
-  },
-  plugins: [vue(), vueDevTools()],
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url))
-    }
   }
 });
