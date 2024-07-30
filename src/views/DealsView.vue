@@ -4,19 +4,27 @@ import DynamicTable from "@/components/DynamicTable.vue";
 import FilterTextInput from "@/components/FilterTextInput.vue";
 import NoResults from "@/components/NoResults.vue";
 import type { TableModel } from "@/types";
-import { debounce } from "@/utils/utils";
+import { SortDirection } from "@/types";
+import { debounce, getColumnByKey } from "@/utils/utils";
 import { computed, ref, watch } from "vue";
 
+/*-- Props --*/
 interface Props<T> {
   tableData: T[];
   tableModel: TableModel<T>;
 }
+
+// There's probably a better way to do this with generics, but this will work for now.
 const props = defineProps<Props<any>>();
 const { tableData, tableModel } = props;
 
+/*-- Refs --*/
 const debouncedFilterText = ref("");
 const filterText = ref<string>("");
 const selectedRows = ref<number[]>([]);
+// post-MVP these could go in local storage to persist sort
+const sortDirection = ref<SortDirection>(SortDirection.ASC);
+const sortColumn = ref("");
 
 /*-- Event handlers --*/
 // handles selection and deselection of rows
@@ -28,11 +36,43 @@ const handleRowClick = (id: number) => {
   }
 };
 
+// Set sort parameters when column headers are clicked
+const handleColumnHeaderClick = (columnKey: string) => {
+  // current column is already sorted, reverse the order:
+  if (sortColumn.value === columnKey) {
+    sortDirection.value =
+      sortDirection.value === SortDirection.ASC ? SortDirection.DESC : SortDirection.ASC;
+  } else {
+    sortColumn.value = columnKey;
+    // changing sort column, so we'll reset sort order to ASC
+    sortDirection.value = SortDirection.ASC;
+  }
+};
+
+// Sort rows by calling sort functions defined inside the table model
+const sortRows = () => {
+  const sortFunction = getColumnByKey(sortColumn.value, tableModel.columns)?.sortFunction;
+  if (sortFunction) {
+    filteredTableData.value.sort((a, b) => sortFunction(a, b, sortDirection.value));
+  }
+};
+
 // clear/reset methods
-const reset = () => {
+const resetFilter = () => {
   debouncedFilterText.value = "";
   filterText.value = "";
+};
+const resetSelectedRows = () => {
   selectedRows.value = [];
+};
+const resetSort = () => {
+  sortDirection.value = SortDirection.ASC;
+  sortColumn.value = "";
+};
+const reset = () => {
+  resetFilter();
+  resetSelectedRows();
+  resetSort();
 };
 
 // debounce the filter text input to limit updates to 250ms after the last keystroke
@@ -82,6 +122,9 @@ const columnKeysAndLabels = computed(() =>
 );
 
 /*-- Watchers --*/
+// sort rows every time column/direction/debouncedFilterText changes
+watch([sortColumn, sortDirection, debouncedFilterText], () => sortRows());
+
 // debounce filter text input:
 watch(filterText, (newValue) => {
   debounceFilterText(newValue);
@@ -94,10 +137,13 @@ watch(filterText, (newValue) => {
     <FilterTextInput v-model="filterText" />
     <div class="grid-container">
       <DynamicTable
+        @handleColumnHeaderClick="handleColumnHeaderClick"
         @handleRowClick="handleRowClick"
-        :tableData="filteredTableData"
         :columns="tableModel.columns"
         :selectedRows="selectedRows"
+        :sortColumn="sortColumn"
+        :sortDirection="sortDirection"
+        :tableData="filteredTableData"
         v-if="filteredTableData.length > 0"
       />
       <NoResults

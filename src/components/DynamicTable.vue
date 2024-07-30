@@ -1,14 +1,18 @@
 <script setup lang="ts">
 import type { TableColumn } from "@/types";
+import { SortDirection } from "@/types";
 import { getColumnByKey } from "@/utils/utils";
 
-interface DynamicTableProps<T> {
-  tableData: T[];
-  selectedRows: number[];
+export interface DynamicTableProps<T> {
   columns: TableColumn<T>[];
+  selectedRows: number[];
+  sortColumn: string | null;
+  sortDirection: SortDirection;
+  tableData: T[];
 }
+
 defineProps<DynamicTableProps<any>>();
-defineEmits(["handleRowClick"]);
+defineEmits(["handleRowClick", "handleColumnHeaderClick"]);
 </script>
 
 <!-- DynamicTable is what the spec calls the "grid" component -->
@@ -21,11 +25,26 @@ defineEmits(["handleRowClick"]);
       <th class="table-header-cell"><!-- empty header cell for checkbox column --></th>
       <th
         class="table-header-cell"
+        :class="`${getColumnByKey(col.key, columns)?.sortable ? 'sortable' : 'unsortable'}`"
         :key="col.key"
         v-for="col in columns"
+        @click="
+          getColumnByKey(col.key, columns)?.sortable
+            ? $emit('handleColumnHeaderClick', col.key)
+            : void 0
+        "
       >
         <div class="flex-contents">
           <div data-testid="column-label">{{ col.label }}</div>
+          <div data-testid="sort-icon-container">
+            {{
+              sortColumn === col.key
+                ? sortDirection === SortDirection.ASC
+                  ? "&uarr;"
+                  : "&darr;"
+                : ""
+            }}
+          </div>
         </div>
       </th>
     </thead>
@@ -69,18 +88,41 @@ defineEmits(["handleRowClick"]);
   min-height: 450px;
   border-collapse: collapse;
   border-radius: 10px;
-  min-width: 40px;
   background-color: $grayBlue;
   color: white;
 
   .table-header {
     .table-header-cell {
+      min-width: 40px;
       padding: 10px 0;
       text-align: left;
       font-weight: 400;
 
       ::selection {
         background-color: transparent;
+      }
+
+      .flex-contents {
+        min-height: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        & > div:nth-child(2) {
+          margin-left: 5px;
+        }
+      }
+
+      &:hover.sortable {
+        cursor: pointer;
+
+        .flex-contents > div:first-child {
+          text-decoration: underline;
+        }
+      }
+
+      &:hover.unsortable {
+        cursor: not-allowed;
       }
     }
   }
