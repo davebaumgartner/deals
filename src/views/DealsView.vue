@@ -2,6 +2,7 @@
 import DetailPane from "@/components/DetailPane.vue";
 import DynamicTable from "@/components/DynamicTable.vue";
 import FilterTextInput from "@/components/FilterTextInput.vue";
+import NoResults from "@/components/NoResults.vue";
 import type { TableModel } from "@/types";
 import { debounce } from "@/utils/utils";
 import { computed, ref, watch } from "vue";
@@ -25,6 +26,13 @@ const handleRowClick = (id: number) => {
   } else {
     selectedRows.value.push(id);
   }
+};
+
+// clear/reset methods
+const reset = () => {
+  debouncedFilterText.value = "";
+  filterText.value = "";
+  selectedRows.value = [];
 };
 
 // debounce the filter text input to limit updates to 250ms after the last keystroke
@@ -90,6 +98,11 @@ watch(filterText, (newValue) => {
         :tableData="filteredTableData"
         :columns="tableModel.columns"
         :selectedRows="selectedRows"
+        v-if="filteredTableData.length > 0"
+      />
+      <NoResults
+        v-else
+        @resetClicked="reset"
       />
       <DetailPane
         v-if="selectedRows.length === 1 && tableData.find((row) => row.id === selectedRows[0])"
