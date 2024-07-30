@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import DynamicTable from "@/components/DynamicTable.vue";
 import type { TableModel } from "@/types";
 import { ref } from "vue";
-import DynamicTable from "./DynamicTable.vue";
 
 interface Props<T> {
   tableData: T[];
