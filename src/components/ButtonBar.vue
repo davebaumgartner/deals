@@ -2,7 +2,7 @@
 import SimpleButton from "./SimpleButton.vue";
 interface Props {
   clearFilterDisabled: boolean;
-  clearSortDisabled: boolean;
+  resetSortDisabled: boolean;
   clearSelectedRowsDisabled: boolean;
   resetDisabled: boolean;
   exportCSVDisabled: boolean;
@@ -11,7 +11,7 @@ interface Props {
 defineProps<Props>();
 defineEmits([
   "clickClearFilter",
-  "clickClearSort",
+  "clickResetSort",
   "clickClearSelectedRows",
   "clickReset",
   "clickExportToCSV",
@@ -30,9 +30,9 @@ defineEmits([
     </SimpleButton>
 
     <SimpleButton
-      @simpleButtonClick="$emit('clickClearSort')"
-      data-testid="clear-sort-button"
-      :disabled="clearSortDisabled"
+      @simpleButtonClick="$emit('clickResetSort')"
+      data-testid="reset-sort-button"
+      :disabled="resetSortDisabled"
     >
       Clear sort
     </SimpleButton>

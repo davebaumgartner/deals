@@ -4,7 +4,7 @@ import ButtonBar from "../ButtonBar.vue";
 
 const allFalse = {
   clearFilterDisabled: false,
-  clearSortDisabled: false,
+  resetSortDisabled: false,
   clearSelectedRowsDisabled: false,
   resetDisabled: false,
   exportCSVDisabled: false,
@@ -32,17 +32,17 @@ describe("ButtonBar", () => {
     expect(wrapper.emitted().clickClearFilter).toBeUndefined();
   });
 
-  it("should emit clickClearSort if clearSort button is clicked", () => {
+  it("should emit clickResetSort if resetSort button is clicked", () => {
     const wrapper = mount(ButtonBar, { props: { ...allFalse } });
-    const clearSortButton = wrapper.find('button[data-testid="clear-sort-button"]');
-    clearSortButton.trigger("click");
-    expect(wrapper.emitted().clickClearSort).toBeDefined();
+    const resetSortButton = wrapper.find('button[data-testid="reset-sort-button"]');
+    resetSortButton.trigger("click");
+    expect(wrapper.emitted().clickResetSort).toBeDefined();
   });
-  it("should disable clearSort button if clearSortDisabled is true", () => {
-    const wrapper = mount(ButtonBar, { props: { ...allFalse, clearSortDisabled: true } });
-    const clearSortButton = wrapper.find('button[data-testid="clear-sort-button"]');
-    clearSortButton.trigger("click");
-    expect(wrapper.emitted().clickClearSort).toBeUndefined();
+  it("should disable resetSort button if resetSortDisabled is true", () => {
+    const wrapper = mount(ButtonBar, { props: { ...allFalse, resetSortDisabled: true } });
+    const resetSortButton = wrapper.find('button[data-testid="reset-sort-button"]');
+    resetSortButton.trigger("click");
+    expect(wrapper.emitted().clickResetSort).toBeUndefined();
   });
 
   it("should emit clickClearSelectedRows if clearSelectedRows button is clicked", () => {

@@ -9,6 +9,7 @@ const row: TableRow = {
   col2: "value2",
   col3: ["value3", "value4", "value5", "value6"]
 };
+
 const headers: KeyLabelPair[] = [
   { key: "col1", label: "Column 1" },
   { key: "col2", label: "Column 2" },
@@ -16,7 +17,7 @@ const headers: KeyLabelPair[] = [
 ];
 
 describe("DetailPane", () => {
-  it("should render default slot content as button text", () => {
+  it("should render", () => {
     const wrapper = mount(DetailPane, { props: { row, headers } });
     const labels = wrapper.findAll("div.label");
     expect(labels.length).toBe(Object.keys(row).length);

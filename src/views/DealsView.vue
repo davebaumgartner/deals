@@ -167,14 +167,14 @@ watch(filterText, (newValue) => {
     <FilterTextInput v-model="filterText" />
     <ButtonBar
       :clearFilterDisabled="filterText.length <= 0"
-      :clearSortDisabled="sortColumn === ''"
+      :resetSortDisabled="sortColumn === ''"
       :clearSelectedRowsDisabled="selectedRows.length <= 0"
       :columnSelectorVisible="columnTogglesVisible"
       :resetDisabled="selectedRows.length <= 0 && filterText === '' && sortColumn === ''"
       :exportCSVDisabled="filteredTableData?.length <= 0"
       @clickClearSelectedRows="clearSelectedRows"
       @clickClearFilter="clearFilter"
-      @clickClearSort="resetSort"
+      @clickResetSort="resetSort"
       @clickReset="reset"
       @clickExportToCSV="exportToCSV(filteredTableData)"
       @toggleColumnEditVisibility="columnTogglesVisible = !columnTogglesVisible"
@@ -193,6 +193,7 @@ watch(filterText, (newValue) => {
     />
     <div class="grid-container">
       <DynamicTable
+        data-testid="results"
         v-if="filteredTableData?.length > 0"
         @handleColumnHeaderClick="handleColumnHeaderClick"
         @handleRowClick="handleRowClick"
@@ -208,6 +209,7 @@ watch(filterText, (newValue) => {
         @resetClicked="reset"
       />
       <DetailPane
+        data-testid="detail-pane"
         v-if="
           selectedRows.length === 1 && filteredTableData.find((row) => row.id === selectedRows[0])
         "
@@ -234,6 +236,18 @@ watch(filterText, (newValue) => {
   .grid-container {
     display: flex;
     flex-direction: row;
+
+    // Minimally responsive: move detail pane above table (below and it wouldn't be immediately visible) on small screens
+    // Not a great experience necessarily, but certainly minimally responsive.
+    @media (max-width: 768px) {
+      [data-testid="results"] {
+        order: 2;
+      }
+      [data-testid="detail-pane"] {
+        order: 1;
+      }
+      flex-direction: column;
+    }
   }
 }
 </style>

@@ -13,6 +13,6 @@ describe("NoResults", () => {
     const wrapper = mount(NoResults);
     const resetLink = wrapper.find("a.reset-link");
     resetLink.trigger("click");
-    expect(wrapper.emitted("resetClicked")).toBeTruthy();
+    expect(wrapper.emitted("resetClicked")).toBeDefined();
   });
 });

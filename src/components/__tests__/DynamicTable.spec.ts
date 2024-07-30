@@ -16,7 +16,7 @@ const columns: TableColumn<TableRow>[] = [
   { key: "col3", type: "string", label: "Column 3", sortable: false }
 ];
 
-// arbitrarily hide the second column
+// hide the second column
 const visibleColumns = columns.filter((column) => column.key !== "col2");
 
 // props for DynamicTable

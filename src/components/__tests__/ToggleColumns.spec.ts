@@ -82,6 +82,6 @@ describe("ToggleColumns", () => {
     const columnElements = wrapper.findAll("div.column");
     expect(columnElements.length).toBe(columns.length + 1);
     columnElements[5].trigger("click");
-    expect(wrapper.emitted().resetColumns).toBeTruthy();
+    expect(wrapper.emitted().resetColumns).toBeDefined();
   });
 });
