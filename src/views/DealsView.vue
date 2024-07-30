@@ -3,6 +3,7 @@ import DetailPane from "@/components/DetailPane.vue";
 import DynamicTable from "@/components/DynamicTable.vue";
 import FilterTextInput from "@/components/FilterTextInput.vue";
 import NoResults from "@/components/NoResults.vue";
+import SimpleButton from "@/components/SimpleButton.vue";
 import type { TableModel } from "@/types";
 import { SortDirection } from "@/types";
 import { debounce, getColumnByKey } from "@/utils/utils";
@@ -58,11 +59,11 @@ const sortRows = () => {
 };
 
 // clear/reset methods
-const resetFilter = () => {
+const clearFilter = () => {
   debouncedFilterText.value = "";
   filterText.value = "";
 };
-const resetSelectedRows = () => {
+const clearSelectedRows = () => {
   selectedRows.value = [];
 };
 const resetSort = () => {
@@ -70,8 +71,8 @@ const resetSort = () => {
   sortColumn.value = "";
 };
 const reset = () => {
-  resetFilter();
-  resetSelectedRows();
+  clearFilter();
+  clearSelectedRows();
   resetSort();
 };
 
@@ -135,7 +136,39 @@ watch(filterText, (newValue) => {
   <main class="main">
     <div class="headline">Deals!</div>
     <FilterTextInput v-model="filterText" />
-    <!-- Reset buttons go here -->
+    <div class="buttons">
+      <SimpleButton
+        :disabled="filterText.length <= 0"
+        data-testid="clear-filter-button"
+        @simpleButtonClick="clearFilter"
+      >
+        Clear filter
+      </SimpleButton>
+
+      <SimpleButton
+        :disabled="sortColumn === ''"
+        @simpleButtonClick="resetSort"
+        data-testid="clear-sort-button"
+      >
+        Clear sort
+      </SimpleButton>
+
+      <SimpleButton
+        @simpleButtonClick="clearSelectedRows"
+        data-testid="clear-selection-button"
+        :disabled="selectedRows.length === 0"
+      >
+        Clear selected rows
+      </SimpleButton>
+
+      <SimpleButton
+        @simpleButtonClick="reset"
+        data-testid="reset-button"
+        :disabled="selectedRows.length <= 0 && filterText === '' && sortColumn === ''"
+      >
+        Reset
+      </SimpleButton>
+    </div>
     <div class="grid-container">
       <DynamicTable
         @handleColumnHeaderClick="handleColumnHeaderClick"
@@ -152,9 +185,11 @@ watch(filterText, (newValue) => {
         @resetClicked="reset"
       />
       <DetailPane
-        v-if="selectedRows.length === 1 && tableData.find((row) => row.id === selectedRows[0])"
+        v-if="
+          selectedRows.length === 1 && filteredTableData.find((row) => row.id === selectedRows[0])
+        "
         :headers="columnKeysAndLabels"
-        :row="tableData.filter((row) => row.id === selectedRows[0])[0]"
+        :row="filteredTableData.filter((row) => row.id === selectedRows[0])[0]"
       />
     </div>
   </main>
@@ -171,6 +206,18 @@ watch(filterText, (newValue) => {
     font-size: 30pt;
     text-align: center;
     margin-bottom: 10px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    button:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 
   .grid-container {
