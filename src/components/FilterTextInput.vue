@@ -19,7 +19,7 @@ defineEmits(["update:modelValue"]);
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .input-text-filter-container {
   display: flex;
   justify-content: center;
