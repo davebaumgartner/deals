@@ -14,7 +14,7 @@ However, I felt like the grid was way too crowded by default at pretty much any 
 
 I also added a series of buttons to clear/reset the current sort/filter/selection settings.
 
-## Link to deployed app: [vercel app link here]()
+## Link to deployed app: [https://deals-coral.vercel.app/](https://deals-coral.vercel.app/)
 
 ## Requirements
 
