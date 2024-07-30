@@ -135,6 +135,7 @@ watch(filterText, (newValue) => {
   <main class="main">
     <div class="headline">Deals!</div>
     <FilterTextInput v-model="filterText" />
+    <!-- Reset buttons go here -->
     <div class="grid-container">
       <DynamicTable
         @handleColumnHeaderClick="handleColumnHeaderClick"
