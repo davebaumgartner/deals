@@ -6,7 +6,11 @@ import NoResults from "@/components/NoResults.vue";
 import SimpleButton from "@/components/SimpleButton.vue";
 import type { TableModel } from "@/types";
 import { SortDirection } from "@/types";
-import { debounce, getColumnByKey } from "@/utils/utils";
+import {
+  debounce,
+  convertJSONToCSVandDownload as exportToCSV,
+  getColumnByKey
+} from "@/utils/utils";
 import { computed, ref, watch } from "vue";
 
 /*-- Props --*/
@@ -167,6 +171,14 @@ watch(filterText, (newValue) => {
         :disabled="selectedRows.length <= 0 && filterText === '' && sortColumn === ''"
       >
         Reset
+      </SimpleButton>
+
+      <SimpleButton
+        @simpleButtonClick="exportToCSV(filteredTableData)"
+        data-testid="export-to-csv-button"
+        :disabled="filteredTableData.length <= 0"
+      >
+        Export to CSV
       </SimpleButton>
     </div>
     <div class="grid-container">
