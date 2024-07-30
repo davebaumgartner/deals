@@ -1,0 +1,1002 @@
+[
+	{
+		"id": 1,
+		"issuer_name": "Franecki, Schuster and Stiedemann",
+		"deal_name": "Considerate Red Chips",
+		"bloomberg_id": "913a0fed-0707-4112-893a-7914e153bacc",
+		"total": 63.94,
+		"industry": "Grocery",
+		"status": "Good",
+		"analysts": [
+			"David O'Keefe",
+			"Mr. Karl Beahan",
+			"Abraham Cruickshank-Will"
+		],
+		"doc_count": 9,
+		"custom_deal_identifiers": [
+			"huge",
+			"bouncy",
+			"lucky"
+		]
+	},
+	{
+		"id": 2,
+		"issuer_name": "Cummerata Inc",
+		"deal_name": "Utilized Silver Hat",
+		"bloomberg_id": "0ee6f093-ac9e-4d70-82f0-3686ea033116",
+		"total": 790.26,
+		"industry": "Toys",
+		"status": "Excellent",
+		"analysts": [
+			"Mr. Bradley Sawayn",
+			"Terrell Stiedemann DDS",
+			"Rosalie Johnson"
+		],
+		"doc_count": 9,
+		"custom_deal_identifiers": [
+			"intentional",
+			"secondary",
+			"quarrelsome"
+		]
+	},
+	{
+		"id": 3,
+		"issuer_name": "Hilpert, Yundt and Halvorson",
+		"deal_name": "Ignorant Green Ball",
+		"bloomberg_id": "b9253a46-bcf2-4a9b-9919-d6361b0d1665",
+		"total": 90.25,
+		"industry": "Garden",
+		"status": "Excellent",
+		"analysts": [
+			"Inez Armstrong",
+			"Francis Hills",
+			"Marshall Medhurst"
+		],
+		"doc_count": 5,
+		"custom_deal_identifiers": [
+			"hard",
+			"able",
+			"huge"
+		]
+	},
+	{
+		"id": 4,
+		"issuer_name": "Hills, Jerde and Cassin",
+		"deal_name": "Attractive Green Chair",
+		"bloomberg_id": "654365a5-f8a9-48ef-abbe-04c6b992bd7e",
+		"total": 770.29,
+		"industry": "Kids",
+		"status": "Bad",
+		"analysts": [
+			"Floyd Renner",
+			"Jessie Schulist",
+			"Mike Hessel"
+		],
+		"doc_count": 1,
+		"custom_deal_identifiers": [
+			"pretty",
+			"calculating",
+			"sinful"
+		]
+	},
+	{
+		"id": 5,
+		"issuer_name": "Rempel Group",
+		"deal_name": "Snappy Sky Blue Sausages",
+		"bloomberg_id": "64a41649-7eb2-4fa9-8678-08d11d0f805c",
+		"total": 200.8,
+		"industry": "Electronics",
+		"status": "Excellent",
+		"analysts": [
+			"Miss Anne Pollich",
+			"Joanna Pollich",
+			"Ismael Carter"
+		],
+		"doc_count": 3,
+		"custom_deal_identifiers": [
+			"best",
+			"sarcastic",
+			"thin"
+		]
+	},
+	{
+		"id": 6,
+		"issuer_name": "Streich - Boyle",
+		"deal_name": "Spry Teal Fish",
+		"bloomberg_id": "ba0accdf-6344-43cc-a253-38936ebac051",
+		"total": 288.69,
+		"industry": "Electronics",
+		"status": "Great",
+		"analysts": [
+			"Dr. Grady Mitchell IV",
+			"Kenny Langosh Sr.",
+			"Clarence Gerlach"
+		],
+		"doc_count": 9,
+		"custom_deal_identifiers": [
+			"spry",
+			"paltry",
+			"slimy"
+		]
+	},
+	{
+		"id": 7,
+		"issuer_name": "Cole Group",
+		"deal_name": "Focused Violet Ball",
+		"bloomberg_id": "273f821e-709f-4b0a-b376-5e992d5a1a26",
+		"total": 930.28,
+		"industry": "Shoes",
+		"status": "Excellent",
+		"analysts": [
+			"Eunice Wiza",
+			"Jared Conn",
+			"Sheila Jacobson"
+		],
+		"doc_count": 5,
+		"custom_deal_identifiers": [
+			"unequaled",
+			"foolish",
+			"yellowish"
+		]
+	},
+	{
+		"id": 8,
+		"issuer_name": "Harvey - Gislason",
+		"deal_name": "Darling Black Keyboard",
+		"bloomberg_id": "c8ba007d-81f0-430e-bc46-76dc4864b4a7",
+		"total": 915.74,
+		"industry": "Shoes",
+		"status": "Bad",
+		"analysts": [
+			"Alton Cronin II",
+			"Gilberto Huels",
+			"Don Hauck"
+		],
+		"doc_count": 2,
+		"custom_deal_identifiers": [
+			"far-flung",
+			"yummy",
+			"filthy"
+		]
+	},
+	{
+		"id": 9,
+		"issuer_name": "Hackett, Kilback and Reichel",
+		"deal_name": "Criminal Purple Bike",
+		"bloomberg_id": "1f276aa2-23b1-43aa-9fea-9f245edb7249",
+		"total": 206.98,
+		"industry": "Books",
+		"status": "Great",
+		"analysts": [
+			"Rodney Ryan",
+			"Deborah Gottlieb",
+			"Brandy Beatty"
+		],
+		"doc_count": 10,
+		"custom_deal_identifiers": [
+			"miserable",
+			"similar",
+			"misguided"
+		]
+	},
+	{
+		"id": 10,
+		"issuer_name": "O'Conner LLC",
+		"deal_name": "Rich Fuchsia Ball",
+		"bloomberg_id": "41268ed4-623a-4a8c-b79a-56451e1e9ace",
+		"total": 542.7,
+		"industry": "Automotive",
+		"status": "Ok",
+		"analysts": [
+			"Dr. Hector Sauer",
+			"Mabel Stracke Jr.",
+			"Sophie Schuppe"
+		],
+		"doc_count": 9,
+		"custom_deal_identifiers": [
+			"immediate",
+			"respectful",
+			"simple"
+		]
+	},
+	{
+		"id": 11,
+		"issuer_name": "Feil, Lynch and Lind",
+		"deal_name": "Acclaimed Sky Blue Pants",
+		"bloomberg_id": "e6b2bc47-e060-4f93-9e38-53224d5f2527",
+		"total": 899.4,
+		"industry": "Baby",
+		"status": "Good",
+		"analysts": [
+			"Kristopher Rogahn",
+			"Erma D'Amore",
+			"Everett Zemlak"
+		],
+		"doc_count": 6,
+		"custom_deal_identifiers": [
+			"belated",
+			"piercing",
+			"judicious"
+		]
+	},
+	{
+		"id": 12,
+		"issuer_name": "Mills - Wehner",
+		"deal_name": "Putrid Maroon Shirt",
+		"bloomberg_id": "f46d0807-c273-4cc8-adb2-40d53a185c91",
+		"total": 963.05,
+		"industry": "Computers",
+		"status": "Great",
+		"analysts": [
+			"Misty Ward",
+			"Ellis Effertz",
+			"Benjamin Dickinson"
+		],
+		"doc_count": 4,
+		"custom_deal_identifiers": [
+			"delicious",
+			"insignificant",
+			"extra-small"
+		]
+	},
+	{
+		"id": 13,
+		"issuer_name": "Mueller - Luettgen",
+		"deal_name": "Peppery Green Ball",
+		"bloomberg_id": "4ca79302-b617-488b-a7a4-ab18a3b0843d",
+		"total": 584.68,
+		"industry": "Toys",
+		"status": "Good",
+		"analysts": [
+			"Dr. Tommy Huel",
+			"Sheri Spencer V",
+			"Harriet Ondricka"
+		],
+		"doc_count": 4,
+		"custom_deal_identifiers": [
+			"blissful",
+			"multicolored",
+			"alert"
+		]
+	},
+	{
+		"id": 14,
+		"issuer_name": "Hegmann - Legros",
+		"deal_name": "Aged Blue Gloves",
+		"bloomberg_id": "a74b663a-a72d-4613-9018-faa7d4752f9b",
+		"total": 242.24,
+		"industry": "Movies",
+		"status": "Ok",
+		"analysts": [
+			"Emily Cruickshank",
+			"Tracy Connelly-Kulas",
+			"Marta Waelchi"
+		],
+		"doc_count": 7,
+		"custom_deal_identifiers": [
+			"infinite",
+			"frugal",
+			"used"
+		]
+	},
+	{
+		"id": 15,
+		"issuer_name": "Marvin Inc",
+		"deal_name": "Responsible Tan Bike",
+		"bloomberg_id": "cdb280e8-fac8-48a3-897b-151b047fcd10",
+		"total": 329.65,
+		"industry": "Music",
+		"status": "Bad",
+		"analysts": [
+			"Matt Sauer",
+			"Joey Bode V",
+			"Kathryn Robel"
+		],
+		"doc_count": 1,
+		"custom_deal_identifiers": [
+			"mammoth",
+			"apt",
+			"regal"
+		]
+	},
+	{
+		"id": 16,
+		"issuer_name": "Rowe - Abernathy",
+		"deal_name": "Complete Lime Sausages",
+		"bloomberg_id": "8e400280-6420-4d64-89c5-11adc3a86755",
+		"total": 902.44,
+		"industry": "Shoes",
+		"status": "Good",
+		"analysts": [
+			"Lori Mitchell",
+			"Emanuel Haag",
+			"Preston Kohler"
+		],
+		"doc_count": 8,
+		"custom_deal_identifiers": [
+			"unselfish",
+			"weary",
+			"rosy"
+		]
+	},
+	{
+		"id": 17,
+		"issuer_name": "Breitenberg, Goyette and Luettgen",
+		"deal_name": "Virtual Fuchsia Computer",
+		"bloomberg_id": "1bab2a67-3991-4103-95ae-75eec177134f",
+		"total": 16,
+		"industry": "Toys",
+		"status": "Bad",
+		"analysts": [
+			"Darrel Lueilwitz",
+			"Donna Runolfsson",
+			"Mable Fadel"
+		],
+		"doc_count": 6,
+		"custom_deal_identifiers": [
+			"parched",
+			"apt",
+			"equal"
+		]
+	},
+	{
+		"id": 18,
+		"issuer_name": "Kuhn - Von",
+		"deal_name": "Polite Grey Keyboard",
+		"bloomberg_id": "a7355f53-41bd-4841-9791-e1ac52289949",
+		"total": 924.84,
+		"industry": "Beauty",
+		"status": "Bad",
+		"analysts": [
+			"Hugo Marquardt",
+			"Nora O'Connell IV",
+			"Kari O'Connell"
+		],
+		"doc_count": 2,
+		"custom_deal_identifiers": [
+			"impressive",
+			"cultured",
+			"euphoric"
+		]
+	},
+	{
+		"id": 19,
+		"issuer_name": "Strosin - Wisoky",
+		"deal_name": "Ragged Lavender Chips",
+		"bloomberg_id": "20f88e36-c88d-4646-a504-2469433dc700",
+		"total": 73.87,
+		"industry": "Clothing",
+		"status": "Ok",
+		"analysts": [
+			"Kerry Glover",
+			"Gustavo Torphy I",
+			"Dr. Kyle Wintheiser"
+		],
+		"doc_count": 7,
+		"custom_deal_identifiers": [
+			"feline",
+			"cute",
+			"yellow"
+		]
+	},
+	{
+		"id": 20,
+		"issuer_name": "Collier - Stracke",
+		"deal_name": "Good Natured Silver Gloves",
+		"bloomberg_id": "0e1af716-7513-4b1a-a0c5-89b08d001cd8",
+		"total": 436.17,
+		"industry": "Electronics",
+		"status": "Excellent",
+		"analysts": [
+			"Randal McKenzie",
+			"Kate Ankunding",
+			"Deanna Boehm"
+		],
+		"doc_count": 8,
+		"custom_deal_identifiers": [
+			"hurtful",
+			"witty",
+			"growling"
+		]
+	},
+	{
+		"id": 21,
+		"issuer_name": "Miller, Hilpert and Hudson",
+		"deal_name": "Tame Orange Bike",
+		"bloomberg_id": "9d8f76e5-672e-411e-a600-029548a08884",
+		"total": 514.46,
+		"industry": "Sports",
+		"status": "Good",
+		"analysts": [
+			"Virgil Hand",
+			"Roberta Douglas",
+			"Miguel Farrell"
+		],
+		"doc_count": 6,
+		"custom_deal_identifiers": [
+			"valuable",
+			"competent",
+			"heartfelt"
+		]
+	},
+	{
+		"id": 22,
+		"issuer_name": "Kshlerin - Armstrong",
+		"deal_name": "Alert Plum Salad",
+		"bloomberg_id": "abc502ea-4af1-418b-a3c1-5a6813ec227f",
+		"total": 325.29,
+		"industry": "Industrial",
+		"status": "Excellent",
+		"analysts": [
+			"Santos Dickinson I",
+			"Ms. Teresa Walker",
+			"Merle Haley"
+		],
+		"doc_count": 10,
+		"custom_deal_identifiers": [
+			"prickly",
+			"old-fashioned",
+			"shimmering"
+		]
+	},
+	{
+		"id": 23,
+		"issuer_name": "Purdy - Oberbrunner",
+		"deal_name": "Deadly Orange Chair",
+		"bloomberg_id": "9fddd8bd-1176-4d78-9105-2b0be98fb5b2",
+		"total": 61.93,
+		"industry": "Tools",
+		"status": "Great",
+		"analysts": [
+			"Joanne Batz DVM",
+			"Pat Medhurst",
+			"Donald Davis"
+		],
+		"doc_count": 4,
+		"custom_deal_identifiers": [
+			"terrible",
+			"gregarious",
+			"occasional"
+		]
+	},
+	{
+		"id": 24,
+		"issuer_name": "Oberbrunner, Collier and Beatty",
+		"deal_name": "Thorny Orange Computer",
+		"bloomberg_id": "745d289a-081d-40f0-a806-dc71045981cb",
+		"total": 905.86,
+		"industry": "Clothing",
+		"status": "Great",
+		"analysts": [
+			"Diana Wintheiser",
+			"Ron Kunde",
+			"Jason Bayer MD"
+		],
+		"doc_count": 9,
+		"custom_deal_identifiers": [
+			"private",
+			"necessary",
+			"educated"
+		]
+	},
+	{
+		"id": 25,
+		"issuer_name": "Bahringer, Ledner and Schroeder",
+		"deal_name": "Marvelous Silver Towels",
+		"bloomberg_id": "9267a541-09b0-491c-ad0a-704bb65b757f",
+		"total": 170.37,
+		"industry": "Computers",
+		"status": "Great",
+		"analysts": [
+			"Ms. Tami Stanton III",
+			"Dr. Yolanda Nicolas DDS",
+			"Melody Hickle"
+		],
+		"doc_count": 8,
+		"custom_deal_identifiers": [
+			"oily",
+			"angelic",
+			"past"
+		]
+	},
+	{
+		"id": 26,
+		"issuer_name": "Von, Waters and Metz",
+		"deal_name": "Vital Fuchsia Shoes",
+		"bloomberg_id": "f1670c0f-18bc-4539-9c61-d64e62db6d7b",
+		"total": 568.69,
+		"industry": "Electronics",
+		"status": "Good",
+		"analysts": [
+			"Orlando Bogan Sr.",
+			"Dr. Lynn Oberbrunner",
+			"Kristi Buckridge-Cormier"
+		],
+		"doc_count": 8,
+		"custom_deal_identifiers": [
+			"vacant",
+			"creepy",
+			"distant"
+		]
+	},
+	{
+		"id": 27,
+		"issuer_name": "Stiedemann - McClure",
+		"deal_name": "Heavy Violet Bacon",
+		"bloomberg_id": "b498479e-afcb-4b0d-86cd-9feaf42f305a",
+		"total": 498.55,
+		"industry": "Clothing",
+		"status": "Bad",
+		"analysts": [
+			"Dr. Alejandro Zieme",
+			"Vincent Gerhold-Prosacco Sr.",
+			"Van Harris"
+		],
+		"doc_count": 3,
+		"custom_deal_identifiers": [
+			"sizzling",
+			"lonely",
+			"major"
+		]
+	},
+	{
+		"id": 28,
+		"issuer_name": "Heidenreich - Upton",
+		"deal_name": "Infatuated Black Shoes",
+		"bloomberg_id": "ce241a30-d0e6-4e0d-a585-c12563641827",
+		"total": 66.96,
+		"industry": "Kids",
+		"status": "Great",
+		"analysts": [
+			"Rolando Fadel",
+			"Lillie Bauch",
+			"Lance Barrows Sr."
+		],
+		"doc_count": 9,
+		"custom_deal_identifiers": [
+			"courteous",
+			"rundown",
+			"realistic"
+		]
+	},
+	{
+		"id": 29,
+		"issuer_name": "Lemke, Schmeler and Schmidt",
+		"deal_name": "Terrific Green Pizza",
+		"bloomberg_id": "a0b5d4b3-6840-44ff-a0bf-feded2dd9353",
+		"total": 590.79,
+		"industry": "Jewelery",
+		"status": "Great",
+		"analysts": [
+			"Kristi Berge",
+			"Keith Pfeffer",
+			"Mr. Gary Robel"
+		],
+		"doc_count": 10,
+		"custom_deal_identifiers": [
+			"leading",
+			"ill-fated",
+			"welcome"
+		]
+	},
+	{
+		"id": 30,
+		"issuer_name": "Hammes, Hahn and Conn",
+		"deal_name": "Embellished Azure Chicken",
+		"bloomberg_id": "911509ed-d565-4c56-a0da-5ad479b53b6d",
+		"total": 192.05,
+		"industry": "Books",
+		"status": "Good",
+		"analysts": [
+			"Ramon Frami",
+			"Roger Hettinger",
+			"Terry Smitham"
+		],
+		"doc_count": 8,
+		"custom_deal_identifiers": [
+			"plastic",
+			"visible",
+			"gracious"
+		]
+	},
+	{
+		"id": 31,
+		"issuer_name": "Brekke, Stark and Hettinger",
+		"deal_name": "Golden Orange Sausages",
+		"bloomberg_id": "be32ce36-e102-4df5-bcdb-e2952f1fb343",
+		"total": 123.77,
+		"industry": "Toys",
+		"status": "Ok",
+		"analysts": [
+			"Joanna Kassulke",
+			"Caleb Blick",
+			"Olivia Schumm"
+		],
+		"doc_count": 10,
+		"custom_deal_identifiers": [
+			"miniature",
+			"rotating",
+			"careless"
+		]
+	},
+	{
+		"id": 32,
+		"issuer_name": "Pfeffer - Sauer",
+		"deal_name": "Sick Yellow Car",
+		"bloomberg_id": "2fc35e86-becc-47aa-93f5-1ce7cb728766",
+		"total": 44.69,
+		"industry": "Music",
+		"status": "Great",
+		"analysts": [
+			"Isaac Hayes",
+			"Nina Koss III",
+			"Luke Mayert"
+		],
+		"doc_count": 6,
+		"custom_deal_identifiers": [
+			"high",
+			"impeccable",
+			"overjoyed"
+		]
+	},
+	{
+		"id": 33,
+		"issuer_name": "Lesch - Jaskolski",
+		"deal_name": "Lean Grey Shirt",
+		"bloomberg_id": "c41936b7-bce5-41af-8e54-144923d6ad4c",
+		"total": 989.09,
+		"industry": "Movies",
+		"status": "Excellent",
+		"analysts": [
+			"Ann Bailey",
+			"Felicia Feeney",
+			"Lamar Nolan"
+		],
+		"doc_count": 7,
+		"custom_deal_identifiers": [
+			"generous",
+			"finished",
+			"disguised"
+		]
+	},
+	{
+		"id": 34,
+		"issuer_name": "Swaniawski LLC",
+		"deal_name": "Limping Ivory Soap",
+		"bloomberg_id": "caeadd2d-b695-49a6-bbeb-4d883cc9e7de",
+		"total": 779.26,
+		"industry": "Kids",
+		"status": "Excellent",
+		"analysts": [
+			"Tiffany Dibbert",
+			"Ismael Schmidt",
+			"Theresa Jenkins"
+		],
+		"doc_count": 9,
+		"custom_deal_identifiers": [
+			"flimsy",
+			"crazy",
+			"glaring"
+		]
+	},
+	{
+		"id": 35,
+		"issuer_name": "Toy and Sons",
+		"deal_name": "Awesome Teal Shirt",
+		"bloomberg_id": "111dfc2e-e209-4274-9c67-c066752a52f7",
+		"total": 197.12,
+		"industry": "Industrial",
+		"status": "Great",
+		"analysts": [
+			"Essie Harris",
+			"Christina Satterfield",
+			"Mr. Sam O'Keefe DVM"
+		],
+		"doc_count": 3,
+		"custom_deal_identifiers": [
+			"muffled",
+			"rash",
+			"mundane"
+		]
+	},
+	{
+		"id": 36,
+		"issuer_name": "Glover - Gulgowski",
+		"deal_name": "Gorgeous Turquoise Shoes",
+		"bloomberg_id": "cad36e51-c4ae-4481-b1a0-9dbc3ac65f66",
+		"total": 415.05,
+		"industry": "Garden",
+		"status": "Ok",
+		"analysts": [
+			"Erick Kutch III",
+			"Forrest Huel",
+			"Emily Mante"
+		],
+		"doc_count": 8,
+		"custom_deal_identifiers": [
+			"famous",
+			"defenseless",
+			"elliptical"
+		]
+	},
+	{
+		"id": 37,
+		"issuer_name": "Goyette - Watsica",
+		"deal_name": "Burdensome Lavender Shirt",
+		"bloomberg_id": "a3834812-a1c3-4222-9a78-cf3847e46613",
+		"total": 314.58,
+		"industry": "Automotive",
+		"status": "Excellent",
+		"analysts": [
+			"Josephine Littel DDS",
+			"Kristen Schulist",
+			"Clinton Koss"
+		],
+		"doc_count": 1,
+		"custom_deal_identifiers": [
+			"unsightly",
+			"popular",
+			"substantial"
+		]
+	},
+	{
+		"id": 38,
+		"issuer_name": "Howell, Fisher and Champlin",
+		"deal_name": "Crooked Lime Pants",
+		"bloomberg_id": "966ea282-f6e7-4758-b9dc-1cd3a805d4ac",
+		"total": 617.44,
+		"industry": "Jewelery",
+		"status": "Ok",
+		"analysts": [
+			"James Kub V",
+			"Clay Zboncak",
+			"Dominic Adams"
+		],
+		"doc_count": 2,
+		"custom_deal_identifiers": [
+			"whimsical",
+			"intentional",
+			"adolescent"
+		]
+	},
+	{
+		"id": 39,
+		"issuer_name": "Reichel - Gutmann",
+		"deal_name": "Fruitful Yellow Chicken",
+		"bloomberg_id": "444aba48-c786-426a-be46-bb6e0454092d",
+		"total": 493.45,
+		"industry": "Jewelery",
+		"status": "Excellent",
+		"analysts": [
+			"Mr. Leland Beahan",
+			"Gary Mohr",
+			"Dr. Ebony Koch"
+		],
+		"doc_count": 1,
+		"custom_deal_identifiers": [
+			"exotic",
+			"quiet",
+			"disguised"
+		]
+	},
+	{
+		"id": 40,
+		"issuer_name": "Marks Inc",
+		"deal_name": "Spirited Green Shirt",
+		"bloomberg_id": "17a04be8-97ed-4493-9929-6fff1046781b",
+		"total": 118.94,
+		"industry": "Home",
+		"status": "Great",
+		"analysts": [
+			"Emilio Hauck-Howell",
+			"Jonathon Hirthe I",
+			"Dr. Jerome Dickens"
+		],
+		"doc_count": 10,
+		"custom_deal_identifiers": [
+			"mixed",
+			"shoddy",
+			"idolized"
+		]
+	},
+	{
+		"id": 41,
+		"issuer_name": "Kunde, Ebert and Mante",
+		"deal_name": "Fearless Tan Shoes",
+		"bloomberg_id": "c18a0d8e-6183-4e59-95b9-387f8aecd2cf",
+		"total": 318.48,
+		"industry": "Shoes",
+		"status": "Good",
+		"analysts": [
+			"Scott Gleason",
+			"Evan VonRueden",
+			"Jessie Bednar"
+		],
+		"doc_count": 10,
+		"custom_deal_identifiers": [
+			"graceful",
+			"second-hand",
+			"black-and-white"
+		]
+	},
+	{
+		"id": 42,
+		"issuer_name": "Conn - Stehr",
+		"deal_name": "Yearly Magenta Keyboard",
+		"bloomberg_id": "77c9f6ab-febe-46bf-9c3e-5fc3b2d788ec",
+		"total": 348.34,
+		"industry": "Jewelery",
+		"status": "Bad",
+		"analysts": [
+			"Adrienne Fisher",
+			"Ms. Vanessa Fahey",
+			"Lucas Rempel"
+		],
+		"doc_count": 10,
+		"custom_deal_identifiers": [
+			"finished",
+			"healthy",
+			"feisty"
+		]
+	},
+	{
+		"id": 43,
+		"issuer_name": "Schulist - Barrows",
+		"deal_name": "Required Blue Fish",
+		"bloomberg_id": "acdca550-fa24-41ec-8764-08117701e307",
+		"total": 911.21,
+		"industry": "Books",
+		"status": "Ok",
+		"analysts": [
+			"Amelia Fay",
+			"Brandon Zieme",
+			"Teresa Hettinger"
+		],
+		"doc_count": 1,
+		"custom_deal_identifiers": [
+			"mortified",
+			"severe",
+			"intentional"
+		]
+	},
+	{
+		"id": 44,
+		"issuer_name": "Herman - Mann",
+		"deal_name": "Quick Violet Pants",
+		"bloomberg_id": "1496929b-6672-49a4-94ac-10b721cf07d1",
+		"total": 479.62,
+		"industry": "Books",
+		"status": "Great",
+		"analysts": [
+			"Dr. Dixie Mosciski",
+			"Rudolph Friesen DVM",
+			"Ms. Jenna Gleason"
+		],
+		"doc_count": 1,
+		"custom_deal_identifiers": [
+			"radiant",
+			"useless",
+			"emotional"
+		]
+	},
+	{
+		"id": 45,
+		"issuer_name": "Bernhard, Herman and Ernser",
+		"deal_name": "Yearly Blue Ball",
+		"bloomberg_id": "8f9f81f6-caed-40d9-8eeb-8ca98842f0d4",
+		"total": 319.25,
+		"industry": "Clothing",
+		"status": "Good",
+		"analysts": [
+			"Deanna Kreiger",
+			"Ben Koss",
+			"Boyd Kreiger"
+		],
+		"doc_count": 7,
+		"custom_deal_identifiers": [
+			"weary",
+			"handy",
+			"damaged"
+		]
+	},
+	{
+		"id": 46,
+		"issuer_name": "Lubowitz and Sons",
+		"deal_name": "Youthful Fuchsia Salad",
+		"bloomberg_id": "f21dd2c3-1eae-45ee-a15a-69539ac52ef1",
+		"total": 755.56,
+		"industry": "Shoes",
+		"status": "Good",
+		"analysts": [
+			"Marshall Morissette",
+			"Robyn McGlynn",
+			"Dianna Bergnaum"
+		],
+		"doc_count": 8,
+		"custom_deal_identifiers": [
+			"concerned",
+			"legitimate",
+			"wooden"
+		]
+	},
+	{
+		"id": 47,
+		"issuer_name": "Collier - Ortiz",
+		"deal_name": "Nippy Sky Blue Sausages",
+		"bloomberg_id": "e671b042-dfc6-4516-8e91-0d4166a24a67",
+		"total": 903.21,
+		"industry": "Music",
+		"status": "Good",
+		"analysts": [
+			"Alyssa Skiles",
+			"Audrey Hegmann",
+			"Kent Paucek"
+		],
+		"doc_count": 6,
+		"custom_deal_identifiers": [
+			"full",
+			"beneficial",
+			"strong"
+		]
+	},
+	{
+		"id": 48,
+		"issuer_name": "Grady, Huels and Keebler",
+		"deal_name": "Tempting Blue Bacon",
+		"bloomberg_id": "bfcf1c84-cea3-4fde-9940-a07ac1152a1a",
+		"total": 792.05,
+		"industry": "Grocery",
+		"status": "Ok",
+		"analysts": [
+			"Myron Kozey DVM",
+			"Kari Champlin",
+			"Darnell Konopelski"
+		],
+		"doc_count": 8,
+		"custom_deal_identifiers": [
+			"variable",
+			"wild",
+			"unwelcome"
+		]
+	},
+	{
+		"id": 49,
+		"issuer_name": "Schultz - Kovacek",
+		"deal_name": "Eminent Orange Table",
+		"bloomberg_id": "d3b4a776-3300-4e26-bce9-d793c0dd0f73",
+		"total": 860.45,
+		"industry": "Garden",
+		"status": "Ok",
+		"analysts": [
+			"Orville Stamm",
+			"Antonia Kuphal",
+			"Angel Dooley"
+		],
+		"doc_count": 3,
+		"custom_deal_identifiers": [
+			"beloved",
+			"wrong",
+			"costly"
+		]
+	},
+	{
+		"id": 50,
+		"issuer_name": "Mitchell Inc",
+		"deal_name": "Somber Maroon Tuna",
+		"bloomberg_id": "95eaa357-2892-458a-91b8-875487c51c8a",
+		"total": 737.85,
+		"industry": "Industrial",
+		"status": "Excellent",
+		"analysts": [
+			"Arthur Schiller",
+			"Vicky Dibbert",
+			"Dr. Leroy Weimann"
+		],
+		"doc_count": 10,
+		"custom_deal_identifiers": [
+			"gentle",
+			"silky",
+			"chilly"
+		]
+	}
+]

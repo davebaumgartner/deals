@@ -1,0 +1,202 @@
+[
+	{
+		"id": 1,
+		"issuer_name": "Stroman, Franecki and Smith",
+		"deal_name": "Blue Indigo Chair",
+		"bloomberg_id": "6643ed80-2ce6-4723-b2b9-c93212fc3a2f",
+		"total": 320.76,
+		"industry": "Outdoors",
+		"status": "Bad",
+		"analysts": [
+			"Roland Wehner",
+			"Gordon Jenkins",
+			"Janie Cole"
+		],
+		"doc_count": 10,
+		"custom_deal_identifiers": [
+			"altruistic",
+			"timely",
+			"radiant"
+		]
+	},
+	{
+		"id": 2,
+		"issuer_name": "Nicolas and Sons",
+		"deal_name": "Lined Teal Car",
+		"bloomberg_id": "3d08fa9b-efe3-4f9c-a504-2374110d3495",
+		"total": 514.34,
+		"industry": "Sports",
+		"status": "Excellent",
+		"analysts": [
+			"Chris Larson",
+			"Ora Von",
+			"Luther Considine"
+		],
+		"doc_count": 9,
+		"custom_deal_identifiers": [
+			"crisp",
+			"detailed",
+			"better"
+		]
+	},
+	{
+		"id": 3,
+		"issuer_name": "Daniel, Gottlieb and Ratke",
+		"deal_name": "Icky Plum Shoes",
+		"bloomberg_id": "a4c86597-c0b8-49df-9c17-e0555a40701b",
+		"total": 284.52,
+		"industry": "Outdoors",
+		"status": "Bad",
+		"analysts": [
+			"Nadine Cummerata",
+			"Blanche Yundt",
+			"Mrs. Sherry Nitzsche"
+		],
+		"doc_count": 7,
+		"custom_deal_identifiers": [
+			"intentional",
+			"starchy",
+			"drab"
+		]
+	},
+	{
+		"id": 4,
+		"issuer_name": "Jacobson, McLaughlin and Gorczany",
+		"deal_name": "Calm Olive Tuna",
+		"bloomberg_id": "0085719f-ae26-40c7-bd91-8d601b0b21f1",
+		"total": 781.98,
+		"industry": "Music",
+		"status": "Good",
+		"analysts": [
+			"Kelly Heathcote",
+			"Ramon Lindgren",
+			"Pat Gulgowski-Rosenbaum"
+		],
+		"doc_count": 9,
+		"custom_deal_identifiers": [
+			"faraway",
+			"dirty",
+			"charming"
+		]
+	},
+	{
+		"id": 5,
+		"issuer_name": "Wiegand - Stiedemann",
+		"deal_name": "Dazzling Mint Green Table",
+		"bloomberg_id": "a955eca6-b65a-4be5-80b2-a1655eabd9fb",
+		"total": 786.58,
+		"industry": "Kids",
+		"status": "Great",
+		"analysts": [
+			"Wilbur Terry",
+			"Ramon Dare PhD",
+			"Dr. Orville Hirthe"
+		],
+		"doc_count": 9,
+		"custom_deal_identifiers": [
+			"bleak",
+			"previous",
+			"deserted"
+		]
+	},
+	{
+		"id": 6,
+		"issuer_name": "Collier - Hegmann",
+		"deal_name": "Cultured Teal Car",
+		"bloomberg_id": "d8525f60-5025-497c-ae82-f064bb8b1261",
+		"total": 164.2,
+		"industry": "Music",
+		"status": "Good",
+		"analysts": [
+			"Mr. Gilberto Lebsack",
+			"Jennifer Tromp MD",
+			"Neal Wiegand"
+		],
+		"doc_count": 8,
+		"custom_deal_identifiers": [
+			"upset",
+			"competent",
+			"spiffy"
+		]
+	},
+	{
+		"id": 7,
+		"issuer_name": "Osinski, Lemke and Smitham",
+		"deal_name": "Awful Magenta Pizza",
+		"bloomberg_id": "e13f66f6-34fa-4ff9-8ad8-fde2412bd079",
+		"total": 676.99,
+		"industry": "Garden",
+		"status": "Excellent",
+		"analysts": [
+			"Wilma Boyer",
+			"Mr. Lynn Johnston",
+			"Vernon Walker"
+		],
+		"doc_count": 5,
+		"custom_deal_identifiers": [
+			"sarcastic",
+			"profuse",
+			"dimpled"
+		]
+	},
+	{
+		"id": 8,
+		"issuer_name": "Smitham - Hermiston",
+		"deal_name": "Qualified Red Sausages",
+		"bloomberg_id": "51de22f0-65ee-45d7-9d9d-40400dc93c06",
+		"total": 39.08,
+		"industry": "Home",
+		"status": "Excellent",
+		"analysts": [
+			"Dr. Lawrence Yost",
+			"Rochelle Mraz",
+			"Cary Hoeger"
+		],
+		"doc_count": 2,
+		"custom_deal_identifiers": [
+			"rough",
+			"whopping",
+			"rapid"
+		]
+	},
+	{
+		"id": 9,
+		"issuer_name": "Schmeler, Corwin and Stamm",
+		"deal_name": "Young Maroon Sausages",
+		"bloomberg_id": "d6359a1a-c8c7-4f89-9ccd-857b0ad8fe8f",
+		"total": 71.12,
+		"industry": "Garden",
+		"status": "Ok",
+		"analysts": [
+			"Robin Bednar",
+			"Tommie Frami",
+			"Carla Davis"
+		],
+		"doc_count": 5,
+		"custom_deal_identifiers": [
+			"occasional",
+			"impish",
+			"tense"
+		]
+	},
+	{
+		"id": 10,
+		"issuer_name": "Bechtelar, Connelly and Franecki",
+		"deal_name": "Rare Salmon Chicken",
+		"bloomberg_id": "57de5727-78de-4a4f-a63a-10c88a25e5cf",
+		"total": 476.1,
+		"industry": "Music",
+		"status": "Great",
+		"analysts": [
+			"Marilyn Swaniawski",
+			"Wilson Runte",
+			"Juanita Wuckert"
+		],
+		"doc_count": 7,
+		"custom_deal_identifiers": [
+			"thorough",
+			"soggy",
+			"honorable"
+		]
+	}
+]
