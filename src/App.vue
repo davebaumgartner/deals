@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import mockData from "../mockData/mockData10.json";
+import mockData from "../mockData/mockData50.json";
 import { MOCK_TABLE_MODEL } from "./tableModel";
 import DealsView from "./views/DealsView.vue";
 </script>
