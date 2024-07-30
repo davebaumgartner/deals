@@ -27,7 +27,7 @@ enum RATINGS {
 
 // Custom table model to match the mock data.
 // If the mock data shape changes, this will need to be updated or a new model will need to be created.
-export const TABLE_MODEL: TableModel<MockTableRow> = {
+export const MOCK_TABLE_MODEL: TableModel<MockTableRow> = {
   defaultSort: (a: MockTableRow, b: MockTableRow) => a.id - b.id,
   // These columns are hidden by default to make the table easier to read.
   defaultHiddenColumns: ["bloomberg_id", "analysts", "custom_deal_identifiers", "doc_count"],
@@ -108,7 +108,7 @@ export const TABLE_MODEL: TableModel<MockTableRow> = {
       label: "Analysts",
       sortable: false,
       displayFormatFunction: (unformattedValue) => {
-        if (typeof unformattedValue === "object" && Array.isArray(unformattedValue)) {
+        if (Array.isArray(unformattedValue)) {
           return `${(unformattedValue as string[]).join(", ").substring(0, 20)}...`;
         }
         return unformattedValue.toString();
@@ -130,7 +130,7 @@ export const TABLE_MODEL: TableModel<MockTableRow> = {
       label: "Identifiers",
       sortable: false,
       displayFormatFunction: (unformattedValue) => {
-        if (typeof unformattedValue === "object" && Array.isArray(unformattedValue)) {
+        if (Array.isArray(unformattedValue)) {
           return `${(unformattedValue as string[]).join(", ").substring(0, 20)}...`;
         }
         return unformattedValue.toString();
