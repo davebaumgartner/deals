@@ -4,6 +4,7 @@ import { SortDirection } from "@/types";
 import { getColumnByKey } from "@/utils/utils";
 
 export interface DynamicTableProps<T> {
+  visibleColumns: TableColumn<T>[];
   columns: TableColumn<T>[];
   selectedRows: number[];
   sortColumn: string | null;
@@ -27,7 +28,7 @@ defineEmits(["handleRowClick", "handleColumnHeaderClick"]);
         class="table-header-cell"
         :class="`${getColumnByKey(col.key, columns)?.sortable ? 'sortable' : 'unsortable'}`"
         :key="col.key"
-        v-for="col in columns"
+        v-for="col in visibleColumns"
         @click="
           getColumnByKey(col.key, columns)?.sortable
             ? $emit('handleColumnHeaderClick', col.key)
@@ -65,7 +66,7 @@ defineEmits(["handleRowClick", "handleColumnHeaderClick"]);
         </td>
         <td
           class="table-cell"
-          v-for="col in columns"
+          v-for="col in visibleColumns"
           :key="col.key"
           :title="col.label"
         >

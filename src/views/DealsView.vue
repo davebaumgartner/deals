@@ -1,17 +1,21 @@
 <script setup lang="ts">
+import { computed, ref, watch } from "vue";
+
 import DetailPane from "@/components/DetailPane.vue";
 import DynamicTable from "@/components/DynamicTable.vue";
 import FilterTextInput from "@/components/FilterTextInput.vue";
 import NoResults from "@/components/NoResults.vue";
 import SimpleButton from "@/components/SimpleButton.vue";
+import ToggleColumns from "@/components/ToggleColumns.vue";
+
 import type { TableModel } from "@/types";
 import { SortDirection } from "@/types";
+
 import {
   debounce,
   convertJSONToCSVandDownload as exportToCSV,
   getColumnByKey
 } from "@/utils/utils";
-import { computed, ref, watch } from "vue";
 
 /*-- Props --*/
 interface Props<T> {
@@ -30,6 +34,12 @@ const selectedRows = ref<number[]>([]);
 // post-MVP these could go in local storage to persist sort
 const sortDirection = ref<SortDirection>(SortDirection.ASC);
 const sortColumn = ref("");
+// only show the columns that are not hidden by default
+const visibleColumns = ref(
+  tableModel?.columns.filter((column) => !tableModel?.defaultHiddenColumns?.includes(column.key)) ??
+    tableModel?.columns
+);
+const columnTogglesVisible = ref(false);
 
 /*-- Event handlers --*/
 // handles selection and deselection of rows
@@ -54,6 +64,15 @@ const handleColumnHeaderClick = (columnKey: string) => {
   }
 };
 
+// Adds/removes columns from visibleColumns when a column toggle button is clicked
+const handleColumnToggle = (columnKey: string) => {
+  if (visibleColumns.value.find((column) => column.key === columnKey)) {
+    visibleColumns.value = visibleColumns.value.filter((column) => column.key !== columnKey);
+  } else {
+    visibleColumns.value.push(tableModel?.columns.find((col) => col.key === columnKey)!);
+  }
+};
+
 // Sort rows by calling sort functions defined inside the table model
 const sortRows = () => {
   const sortFunction = getColumnByKey(sortColumn.value, tableModel.columns)?.sortFunction;
@@ -70,9 +89,15 @@ const clearFilter = () => {
 const clearSelectedRows = () => {
   selectedRows.value = [];
 };
+const resetColumns = () => {
+  visibleColumns.value = tableModel?.columns.filter(
+    (column) => !tableModel?.defaultHiddenColumns?.includes(column.key)
+  );
+};
 const resetSort = () => {
   sortDirection.value = SortDirection.ASC;
   sortColumn.value = "";
+  filteredTableData.value.sort(tableModel.defaultSort); // reset to default sort order
 };
 const reset = () => {
   clearFilter();
@@ -174,6 +199,13 @@ watch(filterText, (newValue) => {
       </SimpleButton>
 
       <SimpleButton
+        data-testid="column-list-toggle-button"
+        @simpleButtonClick="columnTogglesVisible = !columnTogglesVisible"
+      >
+        {{ columnTogglesVisible ? "Close column selector" : "Show/hide columns" }}
+      </SimpleButton>
+
+      <SimpleButton
         @simpleButtonClick="exportToCSV(filteredTableData)"
         data-testid="export-to-csv-button"
         :disabled="filteredTableData.length <= 0"
@@ -181,8 +213,21 @@ watch(filterText, (newValue) => {
         Export to CSV
       </SimpleButton>
     </div>
+    <ToggleColumns
+      v-if="columnTogglesVisible"
+      @toggleColumnVisibility="columnTogglesVisible = !columnTogglesVisible"
+      @columnToggle="handleColumnToggle"
+      @resetColumns="resetColumns"
+      :columns="tableModel?.columns"
+      :visibleColumns="
+        visibleColumns.map((column) => {
+          return { key: column.key, label: column.label };
+        })
+      "
+    />
     <div class="grid-container">
       <DynamicTable
+        v-if="filteredTableData.length > 0"
         @handleColumnHeaderClick="handleColumnHeaderClick"
         @handleRowClick="handleRowClick"
         :columns="tableModel.columns"
@@ -190,7 +235,7 @@ watch(filterText, (newValue) => {
         :sortColumn="sortColumn"
         :sortDirection="sortDirection"
         :tableData="filteredTableData"
-        v-if="filteredTableData.length > 0"
+        :visibleColumns="visibleColumns"
       />
       <NoResults
         v-else
