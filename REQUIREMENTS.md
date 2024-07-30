@@ -11,14 +11,14 @@
   - [ ] thousands of records,
   - [ ] dynamic columns from a JSON object (see below)
   - [ ] export to CSV.
-- [ ] Table columns built dynamically from JSON object
-- [ ] JSON mock file to fill the grid
+- [x] Table columns built dynamically from JSON object
+- [x] JSON mock file to fill the grid
 - [ ] Minimally responsive
 
 - [x] Build must be minified
-- [ ] Use ~~redacted~~ colors (this is a public repo, so I'm not including the company name)
-- [ ] Grid must be a separate component from Deals page
-- [ ] Other components
+- [x] Use ~~redacted~~ colors (this is a public repo, so I'm not including the company name)
+- [x] Grid must be a separate component from Deals page
+- [x] Other components
 - [ ] Component tests
 - [ ] Upload code to Github
 - [ ] Deploy code

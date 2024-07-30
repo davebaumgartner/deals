@@ -18,6 +18,7 @@ defineEmits(["handleRowClick"]);
     data-testid="dynamic-table"
   >
     <thead class="table-header">
+      <th class="table-header-cell"><!-- empty header cell for checkbox column --></th>
       <th
         class="table-header-cell"
         :key="col.key"
@@ -35,6 +36,14 @@ defineEmits(["handleRowClick"]);
         :key="row.id"
         @click="$emit('handleRowClick', row.id)"
       >
+        <td class="table-cell checkbox">
+          <input
+            class="checkbox-element"
+            type="checkbox"
+            :data-testid="`checkbox-${row.id}`"
+            :checked="selectedRows.includes(row.id)"
+          />
+        </td>
         <td
           class="table-cell"
           v-for="col in columns"
@@ -87,6 +96,21 @@ defineEmits(["handleRowClick"]);
     .table-cell {
       padding: 4px 0;
       font-weight: 300;
+
+      &.checkbox {
+        padding: 0 10px;
+        width: 10px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .checkbox-element {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
     }
 
     &.active,
