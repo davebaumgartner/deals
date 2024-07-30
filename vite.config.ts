@@ -9,6 +9,13 @@ export default defineConfig({
   build: {
     minify: true
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/assets/scss/global.scss";`,
+      },
+    },
+  },
   plugins: [vue(), vueDevTools()],
   resolve: {
     alias: {
