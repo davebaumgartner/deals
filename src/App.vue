@@ -10,5 +10,3 @@ import { MOCK_TABLE_MODEL } from "./tableModel";
     :tableModel="MOCK_TABLE_MODEL"
   />
 </template>
-
-<style lang="scss"></style>

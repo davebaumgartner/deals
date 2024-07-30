@@ -2,11 +2,13 @@
 import type { TableColumn } from "@/types";
 import { getColumnByKey } from "@/utils/utils";
 
-interface Props<T> {
+interface DynamicTableProps<T> {
   tableData: T[];
+  selectedRows: number[];
   columns: TableColumn<T>[];
 }
-defineProps<Props<any>>();
+defineProps<DynamicTableProps<any>>();
+defineEmits(["handleRowClick"]);
 </script>
 
 <!-- DynamicTable is what the spec calls the "grid" component -->
@@ -28,9 +30,10 @@ defineProps<Props<any>>();
     </thead>
     <tbody>
       <tr
-        class="table-row"
+        :class="`table-row ${selectedRows.includes(row.id) ? 'active' : ''}`"
         v-for="row in tableData"
         :key="row.id"
+        @click="$emit('handleRowClick', row.id)"
       >
         <td
           class="table-cell"
@@ -51,7 +54,47 @@ defineProps<Props<any>>();
 </template>
 
 <style lang="scss" scoped>
-table {
+.table {
+  margin-top: 10px;
   width: 100%;
+  min-height: 450px;
+  border-collapse: collapse;
+  border-radius: 10px;
+  min-width: 40px;
+  background-color: $grayBlue;
+  color: white;
+
+  .table-header {
+    .table-header-cell {
+      padding: 10px 0;
+      text-align: left;
+      font-weight: 400;
+
+      ::selection {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .table-row {
+    &:hover {
+      .table-cell {
+        background: $brown;
+        cursor: pointer;
+      }
+    }
+
+    .table-cell {
+      padding: 4px 0;
+      font-weight: 300;
+    }
+
+    &.active,
+    &.active:hover {
+      .table-cell {
+        background: $brown;
+      }
+    }
+  }
 }
 </style>
